@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #0A2540, #6C63FF);
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  background-color: #6C63FF;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #524CCF;
+}
+
+/* AI-Bot Placeholder */
+.ai-placeholder {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #0A2540;
+}
+
+.ai-placeholder .section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.ai-placeholder .section-text {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.ai-icon {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: #6C63FF;
+  border-radius: 50%;
+}
+
+/* Messengers Section */
+.messengers {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.messenger-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.messenger-icon {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.messenger-icon:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');
+}
+
+.telegram {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg');
+}
+
+.messenger {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/Facebook_Messenger_Logo_2018.svg');
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  background-color: #6C63FF;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #524CCF;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0A2540;
+  color: #ccc;
+}
+
+.footer a {
+  color: #6C63FF;
+  text-decoration: none;
+}
