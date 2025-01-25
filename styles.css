@@ -49,29 +49,13 @@ body {
   background-color: #524CCF;
 }
 
-/* AI-Bot Placeholder */
-.ai-placeholder {
-  text-align: center;
-  padding: 60px 20px;
+/* 3D Animation Section */
+.animation {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #0A2540;
-}
-
-.ai-placeholder .section-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.ai-placeholder .section-text {
-  font-size: 1rem;
-  color: #ccc;
-}
-
-.ai-icon {
-  width: 100px;
-  height: 100px;
-  margin: 20px auto;
-  background: #6C63FF;
-  border-radius: 50%;
 }
 
 /* Messengers Section */
@@ -107,43 +91,7 @@ body {
 
 .messenger {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/Facebook_Messenger_Logo_2018.svg');
-}
-
-/* Contact Section */
-.contact {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
-}
-
-.contact-form button {
-  padding: 15px 30px;
-  font-size: 1rem;
-  background-color: #6C63FF;
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #524CCF;
+  background-size: 100%;
 }
 
 /* Footer */
