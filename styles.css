@@ -8,9 +8,12 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background: linear-gradient(to bottom, #0A2540, #6C63FF);
-  color: #fff;
+  background-color: #000000; /* Чёрный фон для всего сайта */
+  color: #ffffff; /* Белый текст */
+  margin: 0;
+  padding: 0;
 }
+
 
 .container {
   width: 90%;
