@@ -121,11 +121,20 @@ body {
 }
 
 .messenger {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/Facebook_Messenger_Logo_2018.svg');
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'); /* Логотип Facebook */
   background-size: contain; /* Убедитесь, что изображение не обрезается */
   background-repeat: no-repeat;
   background-position: center;
+  width: 50px; /* Размер логотипа */
+  height: 50px;
+  display: inline-block;
+  transition: transform 0.3s ease; /* Анимация при наведении (по желанию) */
 }
+
+.messenger:hover {
+  transform: scale(1.1); /* Увеличение при наведении */
+}
+
 
 }
 
