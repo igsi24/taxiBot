@@ -86,7 +86,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0A2540;
+  background-color: #000000;
 }
 
 /* Messengers Section */
@@ -129,11 +129,11 @@ body {
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #0A2540;
+  background-color: #000000;
   color: #ccc;
 }
 
 .footer a {
-  color: #6C63FF;
+  color: #000000;
   text-decoration: none;
 }
