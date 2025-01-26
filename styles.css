@@ -121,7 +121,7 @@ body {
 }
 
 .messenger {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'); /* Логотип Facebook */
+  background-image: url('https://commons.wikimedia.org/wiki/File:Facebook_f_logo_%282019%29.svg'); /* Логотип Facebook */
   background-size: contain; /* Убедитесь, что изображение не обрезается */
   background-repeat: no-repeat;
   background-position: center;
