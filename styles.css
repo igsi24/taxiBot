@@ -7,24 +7,42 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #000000; /* Чёрный фон для всего сайта */
-  color: #ffffff; /* Белый текст */
+  background-color: #000000;
+  color: #ffffff;
   margin: 0;
   padding: 0;
+  overflow: hidden; /* Запрещаем прокрутку */
 }
-
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
 }
 
-/* Hero Section */
+/* Фон - изображение на весь экран */
+.fullscreen-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/static/image.png') no-repeat center center/cover;
+  z-index: -1;
+}
+
+/* Текстовый блок поверх изображения */
 .hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
-  padding: 100px 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Затемнение */
 }
 
 .hero-title {
@@ -50,103 +68,4 @@ body {
 
 .hero-button:hover {
   background-color: #524CCF;
-}
-/* Image Section */
-.image-section {
-  position: relative;
-  height: 400px; /* Высота секции */
-  background-color: #0A2540; /* Фоновый цвет, если изображение не загрузится */
-  display: flex; /* Используем flexbox для выравнивания */
-  justify-content: center; /* Горизонтальное центрирование */
-  align-items: center; /* Вертикальное центрирование */
-  overflow: hidden; /* Скрываем части изображения, выходящие за границы секции */
-}
-
-.centered-image {
-  max-width: 100%; /* Изображение масштабируется до ширины секции */
-  max-height: 100%; /* Изображение масштабируется до высоты секции */
-  object-fit: cover; /* Заполняет секцию, сохраняя пропорции */
-  border-radius: 10px; /* Скругляет углы изображения (по желанию) */
-}
-
-
-.centered-image {
-  position: absolute;
-  top: 50%; /* Центрирование изображения по вертикали */
-  left: 50%; /* Центрирование изображения по горизонтали */
-  transform: translate(-50%, -50%); /* Смещает изображение для идеального центрирования */
-  max-width: 100%; /* Устанавливает максимальную ширину изображения в пределах секции */
-  max-height: 100%; /* Устанавливает максимальную высоту изображения в пределах секции */
-  object-fit: cover; /* Масштабирует изображение, чтобы заполнить всю секцию, сохраняя пропорции */
-}
-
-/* 3D Animation Section */
-.animation {
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000000;
-}
-
-/* Messengers Section */
-.messengers {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.messenger-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.messenger-icon {
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  transition: transform 0.3s ease;
-}
-
-.messenger-icon:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');
-}
-
-.telegram {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg');
-}
-
-.messenger {
-  background-image: url('https://commons.wikimedia.org/wiki/File:Facebook_f_logo_(2019).svg'); /* Логотип Facebook */
-  background-size: contain; /* Убедитесь, что изображение не обрезается */
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 50px; /* Размер логотипа */
-  height: 50px;
-  display: inline-block;
-  transition: transform 0.3s ease; /* Анимация при наведении (по желанию) */
-}
-
-.messenger:hover {
-  transform: scale(1.1); /* Увеличение при наведении */
-}
-
-
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #000000;
-  color: #ccc;
-}
-
-.footer a {
-  color: #000000;
-  text-decoration: none;
 }
