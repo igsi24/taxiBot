@@ -7,54 +7,113 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #020202; /* Чёрный фон */
-  color: #ffffff; /* Белый текст */
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #0A2540, #6C63FF);
+  color: #fff;
 }
 
-/* Контейнер с контентом */
-.content {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
   text-align: center;
-  z-index: 2;
+  padding: 100px 20px;
 }
 
-/* Заголовок */
 .hero-title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
-/* Фоновая картинка */
-.fullscreen-image {
-  position: absolute;
-  top: 0;
-  left: 35%; /* Смещаем влево */
-  width: 120%; /* Растягиваем шире экрана */
-  height: 100vh;
-  background: url('/static/image.png') no-repeat center center;
-  background-size: cover;
-  z-index: 1;
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
-/* Логотип Telegram */
-.telegram-logo {
+.hero-button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  background-color: #6C63FF;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #524CCF;
+}
+
+/* Image Section */
+.image-section {
+  position: relative;
+  height: 400px; /* Высота секции */
+  overflow: hidden; /* Скрывает части изображения, выходящие за границы секции */
+  background-color: #020202; /* Фоновый цвет на случай, если изображение не загрузится */
+}
+
+.centered-image {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 20%; /* Центрирование изображения по вертикали */
+  left: 20%; /* Центрирование изображения по горизонтали */
+  transform: translate(-50%, -50%); /* Смещает изображение для идеального центрирования */
+  max-width: 100%; /* Устанавливает максимальную ширину изображения в пределах секции */
+  max-height: 100%; /* Устанавливает максимальную высоту изображения в пределах секции */
+  object-fit: cover; /* Масштабирует изображение, чтобы заполнить всю секцию, сохраняя пропорции */
+}
+
+}
+
+/* Messengers Section */
+.messengers {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.messenger-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.messenger-icon {
   width: 50px;
   height: 50px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg') no-repeat center;
-  background-size: contain;
-  cursor: pointer;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.messenger-icon:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');
+}
+
+.telegram {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg');
+}
+
+.messenger {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/Facebook_Messenger_Logo_2018.svg');
+  background-size: 100%;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #020202;
+  color: #ccc;
+}
+
+.footer a {
+  color: #6C63FF;
+  text-decoration: none;
 }
