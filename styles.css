@@ -6,10 +6,10 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(to bottom, #0A2540, #6C63FF);
-  color: #fff;
+  background-color: #020202; /* Чёрный фон */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .container {
@@ -50,13 +50,12 @@ body {
 }
 
 /* Image Section */
-.image-section {
+.fullscreen-image {
   position: absolute;
-  bottom: 5%; /* Смещаем вниз */
-  left: 0; /* Смещаем влево */
-  width: auto; /* Оригинальный размер */
+  bottom: 0;
+  left: -20%; /* Ещё левее */
+  width: 150%; /* Увеличена на 150% */
   height: auto;
-  overflow: visible; /* Показываем всю картинку */
 }
 
 /* Центрируем изображение */
