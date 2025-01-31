@@ -50,69 +50,55 @@ body {
 }
 
 /* Image Section */
+/* Картинка слева, без обрезки */
 .fullscreen-image {
   position: absolute;
   bottom: 0;
-  left: -20%; /* Ещё левее */
-  width: 150%; /* Увеличена на 150% */
-  height: auto;
+  left: 0;
+  width: auto;
+  height: 100vh;
 }
 
-/* Центрируем изображение */
-.centered-image {
-  position: relative;
-  max-width: 100%; /* Оригинальный размер */
-  height: auto;
-}
-
-
-}
-
-/* Messengers Section */
-.messengers {
-  padding: 60px 20px;
+/* Текст по центру */
+.content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
+  z-index: 2;
 }
 
-.messenger-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.messenger-icon {
-  width: 50px;
-  height: 50px;
-  background-size: cover;
+/* Кнопка вызова такси */
+.hero-button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  background-color: #6C63FF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.messenger-icon:hover {
+.hero-button:hover {
   transform: scale(1.1);
 }
 
-.whatsapp {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');
+/* Telegram-кнопка */
+.telegram-logo {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg') no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.telegram {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg');
-}
-
-.messenger {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/Facebook_Messenger_Logo_2018.svg');
-  background-size: 100%;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #020202;
-  color: #ccc;
-}
-
-.footer a {
-  color: #6C63FF;
-  text-decoration: none;
+.telegram-logo:hover {
+  transform: scale(1.2);
 }
