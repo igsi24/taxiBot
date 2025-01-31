@@ -13,6 +13,7 @@ body {
 }
 
 /* Фоновая картинка */
+/* Исправленный фон */
 .fullscreen-image {
   position: absolute;
   bottom: 0;
@@ -20,19 +21,24 @@ body {
   width: 100%;
   height: 100vh;
   background: url('image.png') no-repeat center center;
-  background-size: contain; /* Сохраняем оригинальные пропорции */
+  background-size: cover; /* Теперь картинка точно заполняет экран */
   z-index: 1;
 }
 
-/* Текстовый блок */
+/* Исправленный текст */
 .content {
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  color: white; /* Делаем текст видимым */
   z-index: 2;
+  background: rgba(0, 0, 0, 0.6); /* Затемняем фон под текстом */
+  padding: 20px;
+  border-radius: 10px;
 }
+
 
 /* Кнопка вызова такси */
 .hero-button {
