@@ -12,57 +12,19 @@ body {
   overflow: hidden;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.hero-button {
-  padding: 15px 30px;
-  font-size: 1rem;
-  background-color: #6C63FF;
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: #524CCF;
-}
-
-/* Image Section */
-/* Картинка слева, без обрезки */
-/* Фикс: Картинка теперь **поверх** фона */
+/* Фоновая картинка */
 .fullscreen-image {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: auto;
+  width: 100%;
   height: 100vh;
-  z-index: 1; /* Поднимаем картинку над фоном */
+  background: url('image.png') no-repeat center center;
+  background-size: contain; /* Сохраняем оригинальные пропорции */
+  z-index: 1;
 }
 
-
-/* Текст по центру */
+/* Текстовый блок */
 .content {
   position: absolute;
   top: 20%;
