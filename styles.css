@@ -51,13 +51,16 @@ body {
 
 /* Image Section */
 /* Картинка слева, без обрезки */
+/* Фикс: Картинка теперь **поверх** фона */
 .fullscreen-image {
   position: absolute;
   bottom: 0;
   left: 0;
   width: auto;
   height: 100vh;
+  z-index: 1; /* Поднимаем картинку над фоном */
 }
+
 
 /* Текст по центру */
 .content {
