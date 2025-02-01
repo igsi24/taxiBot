@@ -9,36 +9,38 @@ body {
   background-color: #020202; /* Чёрный фон */
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh; /* Высота на весь экран */
   overflow: hidden;
+  position: relative;
 }
 
-/* Фоновая картинка */
-/* Исправленный фон */
+/* Фоновая картинка слева */
 .fullscreen-image {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 60%;
-  height: 70vh;
+  width: 40%; /* Изображение занимает 40% экрана */
+  height: 100vh; /* Высота на весь экран */
   background: url('image.png') no-repeat center center;
-  background-size: cover; /* Теперь картинка точно заполняет экран */
-  z-index: 1;
+  background-size: contain; /* Полностью показываем картинку */
 }
 
-/* Исправленный текст */
+/* Текстовый блок */
 .content {
   position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
   text-align: center;
-  color: white; /* Делаем текст видимым */
+  color: white;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.6); /* Затемняем фон под текстом */
+  background: rgba(0, 0, 0, 0.6); /* Затемнённый фон для контраста */
   padding: 20px;
   border-radius: 10px;
 }
-
 
 /* Кнопка вызова такси */
 .hero-button {
@@ -53,7 +55,7 @@ body {
 }
 
 .hero-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Увеличение при наведении */
 }
 
 /* Telegram-кнопка */
@@ -62,8 +64,8 @@ body {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg') no-repeat center;
   background-size: contain;
   cursor: pointer;
@@ -71,5 +73,5 @@ body {
 }
 
 .telegram-logo:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Увеличение при наведении */
 }
