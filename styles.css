@@ -20,14 +20,14 @@ body {
 /* Фоновая картинка слева */
 .fullscreen-image {
   position: absolute;
-  bottom: -10%; /* Смещаем вниз */
+  top: 15%; /* Вместо bottom используем top */
   left: 0;
-  width: 40%; /* Оставляем 40% ширины */
-  height: 70vh; /* Уменьшаем на 30% (раньше было 100vh, теперь 70vh) */
+  width: 40%;
+  height: 70vh; /* Уменьшение на 30% */
   background: url('image.png') no-repeat center center;
   background-size: contain;
+  border: 2px solid blue; /* Временная рамка, чтобы увидеть картинку */
 }
-
 
 /* Текстовый блок */
 .content {
@@ -62,18 +62,19 @@ body {
 /* Логотип Telegram → заменён на image2.png */
 .telegram-logo {
   position: absolute;
-  bottom: 100px; /* Подняли лого выше (было 20px) */
+  bottom: 150px; /* Поднимаем ещё выше */
   left: 50%;
   transform: translateX(-50%);
-  width: 110px; /* Увеличили размер */
-  height: auto;
+  width: 110px; /* Увеличиваем размер */
+  height: 110px;
   background: url('image2.png') no-repeat center;
   background-size: contain;
+  border: 2px solid red; /* Временная рамка, чтобы увидеть логотип */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .telegram-logo:hover {
-  transform: scale(1.2); /* Увеличение при наведении */
+  transform: scale(1.2);
 }
 
