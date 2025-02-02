@@ -59,14 +59,14 @@ body {
   transform: scale(1.1); /* Увеличение при наведении */
 }
 
-/* Telegram-кнопка → заменяем на image2.png и увеличиваем размер */
+/* Логотип Telegram → заменён на image2.png */
 .telegram-logo {
   position: absolute;
-  bottom: 20px;
+  bottom: 100px; /* Подняли лого выше (было 20px) */
   left: 50%;
   transform: translateX(-50%);
-  width: 80px; /* Увеличиваем размер */
-  height: auto; /* Автоматическая высота */
+  width: 110px; /* Увеличили размер */
+  height: auto;
   background: url('image2.png') no-repeat center;
   background-size: contain;
   cursor: pointer;
@@ -76,3 +76,4 @@ body {
 .telegram-logo:hover {
   transform: scale(1.2); /* Увеличение при наведении */
 }
+
