@@ -20,13 +20,14 @@ body {
 /* Фоновая картинка слева */
 .fullscreen-image {
   position: absolute;
-  bottom: 0;
+  bottom: -10%; /* Смещаем вниз */
   left: 0;
-  width: 40%; /* Изображение занимает 40% экрана */
-  height: 100vh; /* Высота на весь экран */
+  width: 40%; /* Оставляем 40% ширины */
+  height: 70vh; /* Уменьшаем на 30% (раньше было 100vh, теперь 70vh) */
   background: url('image.png') no-repeat center center;
-  background-size: contain; /* Полностью показываем картинку */
+  background-size: contain;
 }
+
 
 /* Текстовый блок */
 .content {
@@ -58,15 +59,15 @@ body {
   transform: scale(1.1); /* Увеличение при наведении */
 }
 
-/* Telegram-кнопка */
+/* Telegram-кнопка → заменяем на image2.png и увеличиваем размер */
 .telegram-logo {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg') no-repeat center;
+  width: 80px; /* Увеличиваем размер */
+  height: auto; /* Автоматическая высота */
+  background: url('image2.png') no-repeat center;
   background-size: contain;
   cursor: pointer;
   transition: transform 0.3s ease;
