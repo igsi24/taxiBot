@@ -26,7 +26,7 @@ body {
   height: 70vh; /* Уменьшение на 30% */
   background: url('image.png') no-repeat center center;
   background-size: contain;
-  border: 2px solid blue; /* Временная рамка, чтобы увидеть картинку */
+  
 }
 
 /* Текстовый блок */
@@ -69,7 +69,7 @@ body {
   height: 110px;
   background: url('image2.png') no-repeat center;
   background-size: contain;
-  border: 2px solid red; /* Временная рамка, чтобы увидеть логотип */
+ 
   cursor: pointer;
   transition: transform 0.3s ease;
 }
