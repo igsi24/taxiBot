@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #020202; /* Чёрный фон */
+  background-color: #020000; /* Чёрный фон */
   margin: 0;
   padding: 0;
   display: flex;
@@ -22,11 +22,11 @@ body {
   position: absolute;
   top: 15%; /* Подняли вверх */
   left: 0;
-  width: 70%;
+  width: 110%;
   height: 70vh; /* Размер такой же, как у картинки */
  object-fit: contain;
  /* Заполняет всю область, не растягиваясь */
-  border-radius: 2px; /* Скруглённые углы (если нужно) */
+  /*border-radius: 2px; /* Скруглённые углы (если нужно) */
 }
 
 
