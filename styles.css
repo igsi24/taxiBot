@@ -21,8 +21,8 @@ body {
 .fullscreen-video {
   position: absolute;
   top: 15%; /* Подняли вверх */
-  left: 0;
-  width: 250%;
+  left: 25%;
+  width: 350%;
   height: 70vh; /* Размер такой же, как у картинки */
  object-fit: contain;
  /* Заполняет всю область, не растягиваясь */
