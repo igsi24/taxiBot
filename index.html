@@ -9,8 +9,9 @@
 </head>
 <body>
 <!-- Видео вместо картинки -->
-<video class="fullscreen-video" autoplay muted loop playsinline>
-  <source src="site.mp4" type="video/mp4">
+<!-- Видео проигрывается 1 раз и останавливается -->
+<video class="fullscreen-video" autoplay muted playsinline onended="this.pause();">
+  <source src="video.mp4" type="video/mp4">
   Ваш браузер не поддерживает видео.
 </video>
 
