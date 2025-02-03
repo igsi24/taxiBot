@@ -17,17 +17,18 @@ body {
   position: relative;
 }
 
-/* Видео вместо картинки */
+
+/* Видео занимает 80% экрана */
 .fullscreen-video {
-  position: absolute;
-  top: 15%; /* Подняли вверх */
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 40%;
-  height: 70vh; /* Размер такой же, как у картинки */
-  object-fit: cover; /* Заполняет всю область, не растягиваясь */
-  border-radius: 10px; /* Скруглённые углы (если нужно) */
-  z-index: 1; /* Видео будет под другими элементами */
+  width: 100vw;  /* 100% ширины */
+  height: 80vh;  /* 80% высоты экрана */
+  object-fit: cover;
+  z-index: -1;
 }
+
 
 /* Текстовый блок */
 .content {
@@ -60,21 +61,34 @@ body {
   transform: scale(1.1); /* Увеличение при наведении */
 }
 
-/* Логотип Telegram → заменён на image2.png */
+/* Логотип Telegram → плавное появление и исчезновение */
 .telegram-logo {
   position: absolute;
-  bottom: 50px; /* Оптимальное положение */
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  width: 110px; /* Увеличиваем размер */
+  width: 110px;
   height: 110px;
   background: url('image2.png') no-repeat center;
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
   transition: transform 0.3s ease;
-  z-index: 3; /* Логотип поверх всего */
+
+  opacity: 0; /* Лого невидимо при загрузке */
+  animation: fadeInOut 5s ease-in-out 2s infinite alternate; /* Анимация с задержкой */
 }
+
+/* Анимация появления и исчезновения */
+@keyframes fadeInOut {
+  from {
+    opacity: 0; /* Начинаем с 0% (полностью прозрачный) */
+  }
+  to {
+    opacity: 1; /* Заканчиваем на 100% (полностью видно) */
+  }
+}
+
 
 .telegram-logo:hover {
   transform: scale(1.2);
