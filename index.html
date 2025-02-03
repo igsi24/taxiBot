@@ -9,11 +9,12 @@
 </head>
 <body>
 <!-- Видео вместо картинки -->
-<!-- Видео проигрывается 1 раз и останавливается -->
-<video class="fullscreen-video" autoplay muted playsinline onended="this.pause();">
+<!-- Видео проигрывается 1 раз и остаётся на экране -->
+<video class="fullscreen-video" autoplay muted playsinline onended="this.style.display='block';">
   <source src="video.mp4" type="video/mp4">
   Ваш браузер не поддерживает видео.
 </video>
+
 
 
     <!-- Текст и кнопка -->
