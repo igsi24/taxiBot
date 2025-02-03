@@ -17,17 +17,17 @@ body {
   position: relative;
 }
 
-/* Фоновая картинка слева */
-.fullscreen-image {
+/* Видео вместо картинки */
+.fullscreen-video {
   position: absolute;
-  top: 15%; /* Вместо bottom используем top */
+  top: 15%; /* Подняли вверх */
   left: 0;
   width: 40%;
-  height: 70vh; /* Уменьшение на 30% */
-  background: url('image.png') no-repeat center center;
-  background-size: contain;
-  
+  height: 70vh; /* Размер такой же, как у картинки */
+  object-fit: cover; /* Заполняет всю область, не растягиваясь */
+  border-radius: 10px; /* Скруглённые углы (если нужно) */
 }
+
 
 /* Текстовый блок */
 .content {
