@@ -18,14 +18,15 @@ body {
 }
 
 
-/* Видео на весь экран без обрезки */
+/* Видео на весь экран БЕЗ обрезки */
 .fullscreen-video {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;  /* Полная ширина */
-  height: 100vh; /* Полная высота */
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
   object-fit: contain; /* Теперь видео будет полностью видно */
+  transform: translate(-50%, -50%); /* Центрируем видео */
   z-index: -1;
   background-color: black; /* Если видео не заполняет экран, фон остаётся чёрным */
 }
