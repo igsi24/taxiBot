@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #020000; /* Чёрный фон */
+  background-color: #000000; /* Чёрный фон */
   margin: 0;
   padding: 0;
   display: flex;
@@ -22,7 +22,7 @@ body {
   position: absolute;
   top: 15%; /* Подняли вверх */
   left: 0;
-  width: 110%;
+  width: 250%;
   height: 70vh; /* Размер такой же, как у картинки */
  object-fit: contain;
  /* Заполняет всю область, не растягиваясь */
