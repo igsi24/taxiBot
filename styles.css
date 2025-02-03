@@ -21,10 +21,10 @@ body {
 /* Видео занимает 80% экрана */
 .fullscreen-video {
   position: fixed;
-  top: 0;
+  top: 10;
   left: 0;
   width: 100vw;  /* 100% ширины */
-  height: 80vh;  /* 80% высоты экрана */
+  height: 70vh;  /* 80% высоты экрана */
   object-fit: cover;
   z-index: -1;
 }
@@ -76,7 +76,7 @@ body {
   transition: transform 0.3s ease;
 
   opacity: 0; /* Лого невидимо при загрузке */
-  animation: fadeInOut 5s ease-in-out 2s infinite alternate; /* Анимация с задержкой */
+  animation: fadeInOut 5s ease-in-out 3s infinite alternate; /* Анимация с задержкой */
 }
 
 /* Анимация появления и исчезновения */
