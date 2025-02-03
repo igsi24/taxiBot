@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color:#000000; /* Чёрный фон */
+  background-color: #000000; /* Чёрный фон */
   margin: 0;
   padding: 0;
   display: flex;
@@ -26,9 +26,8 @@ body {
   height: 70vh; /* Размер такой же, как у картинки */
   object-fit: cover; /* Заполняет всю область, не растягиваясь */
   border-radius: 10px; /* Скруглённые углы (если нужно) */
+  z-index: 1; /* Видео будет под другими элементами */
 }
-
-
 
 /* Текстовый блок */
 .content {
@@ -38,7 +37,7 @@ body {
   transform: translateY(-50%);
   text-align: center;
   color: white;
-  z-index: 2;
+  z-index: 2; /* Выше видео */
   background: rgba(0, 0, 0, 0.6); /* Затемнённый фон для контраста */
   padding: 20px;
   border-radius: 10px;
@@ -54,6 +53,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  z-index: 2; /* Поверх видео */
 }
 
 .hero-button:hover {
@@ -63,19 +63,19 @@ body {
 /* Логотип Telegram → заменён на image2.png */
 .telegram-logo {
   position: absolute;
-  bottom: 150px; /* Поднимаем ещё выше */
+  bottom: 50px; /* Оптимальное положение */
   left: 50%;
   transform: translateX(-50%);
   width: 110px; /* Увеличиваем размер */
   height: 110px;
   background: url('image2.png') no-repeat center;
   background-size: contain;
- 
+  background-repeat: no-repeat;
   cursor: pointer;
   transition: transform 0.3s ease;
+  z-index: 3; /* Логотип поверх всего */
 }
 
 .telegram-logo:hover {
   transform: scale(1.2);
 }
-
