@@ -33,35 +33,29 @@ body {
 
 
 /* Текстовый блок */
+/* Контейнер текста */
 .content {
   position: absolute;
   top: 50%;
-  right: 10%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
-  z-index: 2; /* Выше видео */
-  background: rgba(0, 0, 0, 0.6); /* Затемнённый фон для контраста */
-  padding: 20px;
-  border-radius: 10px;
 }
 
-/* Кнопка вызова такси */
-.hero-button {
-  padding: 15px 30px;
-  font-size: 1rem;
-  background-color: #6C63FF;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  z-index: 2; /* Поверх видео */
+/* Прозрачный текст с чёрной обводкой */
+.hero-title, .hero-subtitle {
+  font-size: 3rem; /* Размер текста */
+  color: transparent; /* Делаем текст невидимым */
+  -webkit-text-stroke: 2px black; /* Чёрная обводка текста */
+  text-transform: uppercase; /* Делаем текст заглавными буквами (по желанию) */
+  font-weight: bold; /* Жирный шрифт */
 }
 
-.hero-button:hover {
-  transform: scale(1.1); /* Увеличение при наведении */
+/* Уменьшаем размер подзаголовка */
+.hero-subtitle {
+  font-size: 1.5rem;
 }
+
 
 /* Логотип Telegram → плавное появление и исчезновение */
 .telegram-logo {
