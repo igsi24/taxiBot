@@ -42,12 +42,12 @@ body {
   text-align: center;
 }
 
-/* Прозрачный текст с чёрной обводкой */
+/* Белый текст с серой обводкой */
 .hero-title, .hero-subtitle {
   font-size: 3rem; /* Размер текста */
-  color: transparent; /* Делаем текст невидимым */
-  -webkit-text-stroke: 2px black; /* Чёрная обводка текста */
-  text-transform: uppercase; /* Делаем текст заглавными буквами (по желанию) */
+  color: white; /* Делаем текст белым */
+  -webkit-text-stroke: 2px gray; /* Серая обводка текста */
+  text-transform: uppercase; /* Заглавные буквы (по желанию) */
   font-weight: bold; /* Жирный шрифт */
 }
 
