@@ -37,14 +37,14 @@ body {
 .content {
   position: absolute;
   top: 80%;
-  left: 50%;
+  left: 20%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 
 /* Белый текст с серой обводкой */
 .hero-title, .hero-subtitle {
-  font-size: 3rem; /* Размер текста */
+  font-size: 2rem; /* Размер текста */
   color: white; /* Делаем текст белым */
   -webkit-text-stroke: 2px gray; /* Серая обводка текста */
   text-transform: uppercase; /* Заглавные буквы (по желанию) */
