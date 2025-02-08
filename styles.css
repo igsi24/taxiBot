@@ -21,14 +21,14 @@ body {
 /* Видео на весь экран без обрезки */
 .fullscreen-video {
   position: fixed;
-  top: 0;
+  top: -10px; /* Поднимаем видео вверх на 10px */
   left: 0;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  transform: translateY(-10px); /* Поднимаем видео на 10px вверх */
   z-index: -1;
 }
+
 
 
 
@@ -79,7 +79,7 @@ body {
 .telegram-logo {
   position: absolute;
   bottom: 50px;
-  left: 85%;
+  left: 78%;
   transform: translateX(-50%);
   width: 210px;
   height: 210px;
@@ -90,7 +90,7 @@ body {
   transition: transform 0.3s ease;
 
   opacity: 0; /* Лого невидимо при загрузке */
-  animation: fadeInOut 5s ease-in-out 3s infinite alternate; /* Анимация с задержкой */
+  animation: fadeInOut 15s ease-in-out 1s infinite alternate; /* Анимация с задержкой */
 }
 
 /* Анимация появления и исчезновения */
