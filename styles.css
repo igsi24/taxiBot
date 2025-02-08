@@ -23,11 +23,11 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* Растянуть на всю ширину */
-  height: 100vh; /* Растянуть на всю высоту */
-  object-fit: cover; /* Заполнить экран */
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translateY(-10px); /* Поднимаем видео на 10px вверх */
   z-index: -1;
-  background-color: black; /* Если видео не загружается, фон остаётся чёрным */
 }
 
 
@@ -79,7 +79,7 @@ body {
 .telegram-logo {
   position: absolute;
   bottom: 50px;
-  left: 50%;
+  left: 85%;
   transform: translateX(-50%);
   width: 210px;
   height: 210px;
