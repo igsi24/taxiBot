@@ -20,12 +20,12 @@ body {
 
 .fullscreen-video {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%; /* Ставим центр видео в середину экрана */
+  left: 50%;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  transform: scale(0.95); /* Уменьшаем размер на 5% */
+  transform: translate(-50%, -50%) scale(0.95); /* Центрируем и уменьшаем */
   z-index: -1;
 }
 
