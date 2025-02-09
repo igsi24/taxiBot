@@ -90,7 +90,7 @@ body {
   transition: transform 0.3s ease;
 
   opacity: 0; /* Лого невидимо при загрузке */
-  animation: fadeInOut 5s ease-in-out 1s infinite alternate; /* Анимация с задержкой */
+  animation: fadeInOut 18s ease-in-out 1s infinite alternate; /* Анимация с задержкой */
 }
 
 /* Анимация появления и исчезновения */
