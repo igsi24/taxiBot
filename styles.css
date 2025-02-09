@@ -90,7 +90,7 @@ body {
   transition: transform 0.3s ease;
 
   opacity: 0; /* Лого невидимо при загрузке */
-  animation: fadeInOut 18s ease-in-out 1s infinite alternate; /* Анимация с задержкой */
+  animation: fadeInOut 20s ease-in-out 1s infinite alternate; /* Анимация с задержкой */
 }
 
 /* Анимация появления и исчезновения */
@@ -99,7 +99,7 @@ body {
     opacity: 0; /* Начинаем с 0% (полностью прозрачный) */
   }
   to {
-    opacity: 0.01; /* Заканчиваем на 70% (полностью видно) */
+    opacity: 0.03; /* Заканчиваем на 70% (полностью видно) */
   }
 }
 
