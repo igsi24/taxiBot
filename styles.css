@@ -78,8 +78,8 @@ body {
 /* Логотип Telegram → плавное появление и исчезновение */
 .telegram-logo {
   position: absolute;
-  bottom: 60px;
-  left: 45%;
+  bottom: 57px;
+  left: 47%;
   transform: translateX(-50%);
   width: 360px;
   height: 360px;
@@ -99,7 +99,7 @@ body {
     opacity: 0; /* Начинаем с 0% (полностью прозрачный) */
   }
   to {
-    opacity: 0.7; /* Заканчиваем на 70% (полностью видно) */
+    opacity: 0.08; /* Заканчиваем на 70% (полностью видно) */
   }
 }
 
