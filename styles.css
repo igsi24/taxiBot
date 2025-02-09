@@ -79,10 +79,10 @@ body {
 .telegram-logo {
   position: absolute;
   bottom: 60px;
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
-  width: 260px;
-  height: 260px;
+  width: 360px;
+  height: 360px;
   background: url('image2.png') no-repeat center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -90,7 +90,7 @@ body {
   transition: transform 0.3s ease;
 
   opacity: 0; /* Лого невидимо при загрузке */
-  animation: fadeInOut 15s ease-in-out 1s infinite alternate; /* Анимация с задержкой */
+  animation: fadeInOut 5s ease-in-out 1s infinite alternate; /* Анимация с задержкой */
 }
 
 /* Анимация появления и исчезновения */
@@ -99,7 +99,7 @@ body {
     opacity: 0; /* Начинаем с 0% (полностью прозрачный) */
   }
   to {
-    opacity: 1; /* Заканчиваем на 100% (полностью видно) */
+    opacity: 0.7; /* Заканчиваем на 70% (полностью видно) */
   }
 }
 
