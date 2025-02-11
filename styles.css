@@ -43,12 +43,13 @@ body {
 }
 
 /* Белый текст с серой обводкой */
+/* Белый текст с серой обводкой */
 .hero-title, .hero-subtitle {
-  font-size: 1rem; /* Размер текста */
-  color: white; /* Делаем текст белым */
-  -webkit-text-stroke: 2px gray; /* Серая обводка текста */
-  text-transform: uppercase; /* Заглавные буквы (по желанию) */
-  font-weight: bold; /* Жирный шрифт */
+  font-size: 1rem;
+  color: white;
+  -webkit-text-stroke: 2px gray;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 /* Основные стили */
@@ -56,12 +57,33 @@ body {
   font-size: 4rem;
 }
 
+/* Контейнер текста (позиционируем его корректно) */
+.content {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+/* Видео для десктопа */
+.desktop-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 /* По умолчанию скрываем мобильное видео */
 .mobile-video {
   display: none;
 }
 
-/* Показываем нужное видео на разных устройствах */
+/* Показываем нужное видео на мобильных устройствах */
 @media (max-width: 768px) {
   .desktop-video {
     display: none;
@@ -77,32 +99,17 @@ body {
     left: 0;
     z-index: -1;
   }
-}
-
-/* Видео для десктопа */
-.desktop-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
 
   .content {
-    top: 55%; /* Опускаем текст ниже, чтобы не наезжал на видео */
+    top: 60%; /* Опускаем текст ещё ниже для мобильных */
   }
 
   .hero-title {
-    font-size: 2rem; /* Уменьшаем размер текста */
+    font-size: 2rem;
   }
 }
 
-
-
-
-/* Логотип Telegram → плавное появление и исчезновение */
+/* Логотип Telegram → плавное появление */
 .telegram-logo {
   position: absolute;
   bottom: 51px;
@@ -116,20 +123,19 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease;
 
-  opacity: 0; /* Лого невидимо при загрузке */
-  animation: fadeInOut 20s ease-in-out 1s infinite alternate; /* Анимация с задержкой */
+  opacity: 0;
+  animation: fadeInOut 20s ease-in-out 1s infinite alternate;
 }
 
 /* Анимация появления и исчезновения */
 @keyframes fadeInOut {
   from {
-    opacity: 0; /* Начинаем с 0% (полностью прозрачный) */
+    opacity: 0;
   }
   to {
-    opacity: 0,01; /* Заканчиваем на 70% (полностью видно) */
+    opacity: 0.01; /* Исправлено: точка вместо запятой */
   }
 }
-
 
 .telegram-logo:hover {
   transform: scale(1.2);
