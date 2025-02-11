@@ -43,14 +43,31 @@ body {
 
 /* Фоновое видео на весь экран */
 .fullscreen-video {
-  position: fixed; /* Фиксируем на фоне */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* 100% ширины экрана */
-  height: 100vh; /* 100% высоты экрана */
-  object-fit: cover; /* Заполняет экран без искажений */
-  z-index: -1; /* Отправляем на задний план */
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
+
+/* По умолчанию скрываем мобильное видео */
+.mobile-video {
+  display: none;
+}
+
+/* Показываем мобильное видео и скрываем десктопное на телефонах */
+@media (max-width: 768px) {
+  .desktop-video {
+    display: none;
+  }
+
+  .mobile-video {
+    display: block;
+  }
+}
+
 
 /* Логотип Telegram → плавное появление */
 .telegram-logo {
