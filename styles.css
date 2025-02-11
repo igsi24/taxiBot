@@ -16,23 +16,6 @@ body {
   overflow: hidden;
   position: relative;
 }
-
-
-.fullscreen-video {
-  position: fixed;
-  top: 50%; /* Ставим центр видео в середину экрана */
-  left: 50%;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  transform: translate(-50%, -50%) scale(0.95); /* Центрируем и уменьшаем */
-  z-index: -1;
-}
-
-
-
-
-/* Текстовый блок */
 /* Контейнер текста */
 .content {
   position: absolute;
@@ -42,7 +25,6 @@ body {
   text-align: center;
 }
 
-/* Белый текст с серой обводкой */
 /* Белый текст с серой обводкой */
 .hero-title, .hero-subtitle {
   font-size: 1rem;
