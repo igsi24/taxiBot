@@ -79,11 +79,12 @@ body {
 }
 
 /* По умолчанию скрываем мобильное видео */
+/* По умолчанию скрываем мобильное видео */
 .mobile-video {
   display: none;
 }
 
-/* Показываем нужное видео на мобильных устройствах */
+/* Показываем мобильное видео на мобильных */
 @media (max-width: 768px) {
   .desktop-video {
     display: none;
@@ -99,6 +100,18 @@ body {
     left: 0;
     z-index: -1;
   }
+}
+
+/* Видео для ПК */
+.desktop-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
   .content {
     top: 60%; /* Опускаем текст ещё ниже для мобильных */
