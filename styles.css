@@ -71,7 +71,7 @@ body {
     top: 50%; /* Центрируем */
     left: 50%;
     width: 100vw;
-    height: 90vh; /* Уменьшаем высоту до 90% экрана */
+    height: 80vh; /* Уменьшаем высоту до 90% экрана */
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: -1;
