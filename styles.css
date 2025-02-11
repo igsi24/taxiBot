@@ -16,13 +16,15 @@ body {
   overflow: hidden;
   position: relative;
 }
+
 /* Контейнер текста */
 .content {
   position: absolute;
-  top: 85%;
-  left: 20%;
+  top: 60%; /* Опускаем текст ниже */
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 2;
 }
 
 /* Белый текст с серой обводкой */
@@ -39,34 +41,15 @@ body {
   font-size: 4rem;
 }
 
-/* Контейнер текста (позиционируем его корректно) */
-.content {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 2;
-}
-
-/* Фоновое видео для ПК */
+/* Фоновое видео на весь экран */
 .fullscreen-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
+  position: fixed; /* Фиксируем на фоне */
   top: 0;
   left: 0;
-  z-index: -1;
-}
-
-  .content {
-    top: 60%; /* Опускаем текст ещё ниже для мобильных */
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
+  width: 100vw; /* 100% ширины экрана */
+  height: 100vh; /* 100% высоты экрана */
+  object-fit: cover; /* Заполняет экран без искажений */
+  z-index: -1; /* Отправляем на задний план */
 }
 
 /* Логотип Telegram → плавное появление */
