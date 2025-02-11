@@ -56,12 +56,39 @@ body {
   font-size: 4rem;
 }
 
+/* По умолчанию скрываем мобильное видео */
+.mobile-video {
+  display: none;
+}
+
+/* Показываем нужное видео на разных устройствах */
 @media (max-width: 768px) {
-  .fullscreen-video {
-    width: 100vw; /* Растянуть по ширине */
-    height: 50vh; /* Сделать видео хотя бы на половину экрана */
-    object-fit: cover; /* Заполняем область */
+  .desktop-video {
+    display: none;
   }
+
+  .mobile-video {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+/* Видео для десктопа */
+.desktop-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
   .content {
     top: 55%; /* Опускаем текст ниже, чтобы не наезжал на видео */
