@@ -67,43 +67,8 @@ body {
   z-index: 2;
 }
 
-/* Видео для десктопа */
-.desktop-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-/* По умолчанию скрываем мобильное видео */
-/* По умолчанию скрываем мобильное видео */
-.mobile-video {
-  display: none;
-}
-
-/* Показываем мобильное видео на мобильных */
-@media (max-width: 768px) {
-  .desktop-video {
-    display: none;
-  }
-
-  .mobile-video {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-}
-
-/* Видео для ПК */
-.desktop-video {
+/* Фоновое видео для ПК */
+.fullscreen-video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
