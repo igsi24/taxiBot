@@ -41,23 +41,25 @@ body {
   font-size: 4rem;
 }
 
-/* Фоновое видео на весь экран */
-.fullscreen-video {
+/* Фоновое видео для ПК (уменьшаем размер) */
+.desktop-video {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%; /* Центрируем */
+  left: 50%;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  transform: scale(0.9); /* Уменьшаем до 90% */
+  transform-origin: center;
   z-index: -1;
 }
 
-/* По умолчанию скрываем мобильное видео */
+/* Фоновое видео для мобильных (уменьшаем высоту) */
 .mobile-video {
-  display: none;
+  display: none; /* По умолчанию скрываем */
 }
 
-/* Показываем мобильное видео и скрываем десктопное на телефонах */
+/* Показываем мобильное видео и уменьшаем высоту */
 @media (max-width: 768px) {
   .desktop-video {
     display: none;
@@ -65,8 +67,17 @@ body {
 
   .mobile-video {
     display: block;
+    position: fixed;
+    top: 50%; /* Центрируем */
+    left: 50%;
+    width: 100vw;
+    height: 90vh; /* Уменьшаем высоту до 90% экрана */
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
   }
 }
+
 
 
 /* Логотип Telegram → плавное появление */
