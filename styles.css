@@ -102,19 +102,34 @@ body {
   border: none;
 }
 
-/* Телеграм-кнопка */
+/* Телеграм-кнопка (по умолчанию скрыта, увеличена, смещена) */
 .telegram-logo {
   position: absolute;
-  bottom: 51px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
+  top: calc(100% - 130px); /* Подняли вверх на 30px */
+  left: calc(50% - 130px); /* Сдвинули влево на 30px */
+  width: 300px; /* Увеличена в 3 раза */
+  height: 300px;
   background: url('image2.png') no-repeat center;
   background-size: contain;
   cursor: pointer;
   transition: transform 0.3s ease;
+  opacity: 0; /* Полностью невидима */
 }
+
+/* ПК-версия (оставляем невидимой) */
+@media (min-width: 769px) {
+  .telegram-logo {
+    opacity: 0; /* Остаётся невидимой */
+  }
+}
+
+/* Мобильная версия (оставляем невидимой) */
+@media (max-width: 768px) {
+  .telegram-logo {
+    opacity: 0; /* Остаётся невидимой */
+  }
+}
+
 
 /* Эффект увеличения при наведении */
 .telegram-logo:hover {
