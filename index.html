@@ -8,30 +8,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Видео вместо картинки -->
-<!-- Видео для ПК (1920x1080) -->
-<video class="fullscreen-video desktop-video" autoplay muted playsinline>
-  <source src="Plane.mp4" type="video/mp4">
-</video>
 
-<!-- Видео для мобильных (1080x1920) -->
-<video class="fullscreen-video mobile-video" autoplay muted playsinline>
-  <source src="Planemobile.mp4" type="video/mp4">
-</video>
+    <!-- Видео вместо картинки -->
+    <!-- Видео для ПК (1920x1080) -->
+    <video class="fullscreen-video desktop-video" autoplay muted playsinline>
+      <source src="Plane.mp4" type="video/mp4">
+    </video>
 
+    <!-- Видео для мобильных (1080x1920) -->
+    <video class="fullscreen-video mobile-video" autoplay muted playsinline>
+      <source src="Planemobile.mp4" type="video/mp4">
+    </video>
 
-
-
-    <!-- Текст и кнопка -->
-    <div class="content">
-  
- <!--   <p class="hero-subtitle">Искусственный интеллект, который всегда рядом.</p> -->
-</div>
-
+    <!-- Контейнер для Telegram iframe (только для ПК) -->
+    <div class="telegram-iframe-container">
+      <iframe src="https://web.telegram.org/k/#@AIgptstest2024_bot"></iframe>
+    </div>
 
     <!-- Telegram-кнопка -->
-<a href="https://web.telegram.org/k/#@AIgptstest2024_bot" target="_blank" class="telegram-logo"></a>
+    <a href="https://t.me/AIgptstest2024_bot" class="telegram-logo" target="_blank" id="telegramButton"> </a>
 
+    <!-- Скрипт для открытия Telegram-приложения на мобильных -->
+    <script>
+      document.getElementById("telegramButton").addEventListener("click", function(event) {
+        if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
+          // Попытка открыть Telegram-приложение
+          setTimeout(function () {
+            window.location.href = "https://t.me/AIgptstest2024_bot"; // Если не сработает, откроется веб-версия
+          }, 1000);
+          
+          window.location.href = "tg://resolve?domain=AIgptstest2024_bot"; 
+          event.preventDefault();
+        }
+      });
+    </script>
 
 </body>
 </html>
