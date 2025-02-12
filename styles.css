@@ -79,19 +79,27 @@ body {
 
 
 
-/* Telegram iframe (видно только на ПК) */
+/* Контейнер для iframe (по умолчанию скрыт) */
 .telegram-iframe-container {
-  display: block;
-  width: 100%;
-  height: 600px;
-  margin-top: 20px;
+  display: none; /* Скрыто, пока не нажмут на кнопку */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw; /* Увеличили размер */
+  height: 40vh;
+  background: rgba(0, 0, 0, 0.8); /* Затемнённый фон */
+  border-radius: 10px;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Скрываем iframe на мобильных */
-@media (max-width: 768px) {
-  .telegram-iframe-container {
-    display: none;
-  }
+/* Сам iframe (увеличен) */
+.telegram-iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* Телеграм-кнопка */
@@ -109,21 +117,6 @@ body {
 }
 
 /* Эффект увеличения при наведении */
-.telegram-logo:hover {
-  transform: scale(1.2);
-}
-
-
-/* Анимация появления и исчезновения */
-@keyframes fadeInOut {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.01; /* Исправлено: точка вместо запятой */
-  }
-}
-
 .telegram-logo:hover {
   transform: scale(1.2);
 }
