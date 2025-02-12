@@ -105,10 +105,10 @@ body {
 /* Телеграм-кнопка (по умолчанию скрыта, увеличена, смещена) */
 .telegram-logo {
   position: absolute;
-  top: calc(100% - 130px); /* Подняли вверх на 30px */
-  left: calc(50% - 130px); /* Сдвинули влево на 30px */
-  width: 300px; /* Увеличена в 3 раза */
-  height: 300px;
+  top: calc(100% - 180px); /* Подняли вверх на 30px */
+  left: calc(50% - 150px); /* Сдвинули влево на 30px */
+  width: 200px; /* Увеличена в 3 раза */
+  height: 200px;
   background: url('image2.png') no-repeat center;
   background-size: contain;
   cursor: pointer;
