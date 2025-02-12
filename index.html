@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    <!-- Видео вместо картинки -->
     <!-- Видео для ПК (1920x1080) -->
     <video class="fullscreen-video desktop-video" autoplay muted playsinline>
       <source src="Plane.mp4" type="video/mp4">
@@ -20,25 +19,22 @@
       <source src="Planemobile.mp4" type="video/mp4">
     </video>
 
-    <!-- Контейнер для Telegram iframe (только для ПК) -->
-    <div class="telegram-iframe-container">
-      <iframe src="https://web.telegram.org/k/#@AIgptstest2024_bot"></iframe>
+    <!-- Telegram-кнопка -->
+    <a href="#" class="telegram-logo" id="telegramButton"></a>
+
+    <!-- Контейнер для Telegram iframe (скрыт по умолчанию) -->
+    <div class="telegram-iframe-container" id="telegramIframeContainer">
+      <iframe src="https://web.telegram.org/k/#@AIgptstest2024_bot" id="telegramIframe"></iframe>
     </div>
 
-    <!-- Telegram-кнопка -->
-    <a href="https://t.me/AIgptstest2024_bot" class="telegram-logo" target="_blank" id="telegramButton"> </a>
-
-    <!-- Скрипт для открытия Telegram-приложения на мобильных -->
+    <!-- Скрипт для показа iframe после нажатия на кнопку -->
     <script>
       document.getElementById("telegramButton").addEventListener("click", function(event) {
-        if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
-          // Попытка открыть Telegram-приложение
-          setTimeout(function () {
-            window.location.href = "https://t.me/AIgptstest2024_bot"; // Если не сработает, откроется веб-версия
-          }, 1000);
-          
-          window.location.href = "tg://resolve?domain=AIgptstest2024_bot"; 
-          event.preventDefault();
+        var iframeContainer = document.getElementById("telegramIframeContainer");
+        if (iframeContainer.style.display === "none" || iframeContainer.style.display === "") {
+          iframeContainer.style.display = "flex"; // Показываем iframe
+        } else {
+          iframeContainer.style.display = "none"; // Скрываем при повторном нажатии
         }
       });
     </script>
