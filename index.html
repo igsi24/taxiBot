@@ -22,19 +22,20 @@
     <!-- Telegram-кнопка -->
     <a href="#" class="telegram-logo" id="telegramButton"></a>
 
-    <!-- Контейнер для Telegram iframe (скрыт по умолчанию) -->
-    <div class="telegram-iframe-container" id="telegramIframeContainer">
-      <iframe src="https://web.telegram.org/k/#@AIgptstest2024_bot" id="telegramIframe"></iframe>
-    </div>
-
-    <!-- Скрипт для показа iframe после нажатия на кнопку -->
+    <!-- Скрипт для открытия Telegram-приложения -->
     <script>
       document.getElementById("telegramButton").addEventListener("click", function(event) {
-        var iframeContainer = document.getElementById("telegramIframeContainer");
-        if (iframeContainer.style.display === "none" || iframeContainer.style.display === "") {
-          iframeContainer.style.display = "flex"; // Показываем iframe
+        event.preventDefault(); // Предотвращаем стандартный переход
+
+        // Проверяем, мобильное устройство или нет
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+          // Открываем Telegram-приложение
+          window.location.href = "tg://resolve?domain=AIgptstest2024_bot";
         } else {
-          iframeContainer.style.display = "none"; // Скрываем при повторном нажатии
+          // Открываем веб-версию Telegram
+          window.open("https://web.telegram.org/k/#@AIgptstest2024_bot", "_blank");
         }
       });
     </script>
