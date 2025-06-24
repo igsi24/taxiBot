@@ -41,31 +41,29 @@ body {
   font-size: 4rem;
 }
 
-/* Фоновое видео для ДЕСКТОПА (90% размера, центрируем) */
-.desktop-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  transform: translate(-50%, -50%)  scale(0.9) translateY(-40px); /* Смещаем вверх */
-  z-index: -1;
-}
-
-
-
-/* Фоновое видео для МОБИЛЬНЫХ */
+/* Скрываем видео по умолчанию */
+.desktop-video,
 .mobile-video {
   display: none;
 }
 
-/* Показываем мобильное видео и скрываем десктопное на телефонах */
-@media (max-width: 768px) {
+/* Десктоп — показываем desktop-video */
+@media (min-width: 769px) {
   .desktop-video {
-    display: none;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%) scale(0.9) translateY(-40px);
+    z-index: -1;
   }
+}
 
+/* Мобильные — показываем mobile-video */
+@media (max-width: 768px) {
   .mobile-video {
     display: block;
     position: fixed;
@@ -74,10 +72,11 @@ body {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    transform: translate(-50%, -50%) scale(0.9); /* Тоже уменьшаем и центрируем */
+    transform: translate(-50%, -50%) scale(0.9);
     z-index: -1;
   }
 }
+
 
 
 
