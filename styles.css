@@ -46,11 +46,13 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 100vw;  /* Полная ширина экрана */
-  height: 100vh; /* Полная высота экрана */
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-  transform: translate(-50%, -50%) ; /* Центрируем + уменьшаем до 90% */
+  transform: translate(-50%, -50%) translateY(-30px); /* Смещаем вверх */
   z-index: -1;
+}
+
 }
 
 /* Фоновое видео для МОБИЛЬНЫХ */
