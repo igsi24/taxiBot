@@ -49,7 +49,7 @@ body {
   width: 100vw;  /* Полная ширина экрана */
   height: 100vh; /* Полная высота экрана */
   object-fit: cover;
-  transform: translate(-50%, -50%) scale(0.99); /* Центрируем + уменьшаем до 90% */
+  transform: translate(-60%, -60%) scale(0.99); /* Центрируем + уменьшаем до 90% */
   z-index: -1;
 }
 
