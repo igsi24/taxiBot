@@ -137,3 +137,50 @@ body {
 .telegram-logo:hover {
   transform: scale(1.2);
 }
+/* Кнопки действий */
+.action-btn {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #0088cc;
+}
+
+/* Контейнер формы */
+.form-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.85);
+  padding: 20px;
+  border-radius: 12px;
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+}
+
+.form-container form input,
+.form-container form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.form-container form button {
+  background-color: #00cc88;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
