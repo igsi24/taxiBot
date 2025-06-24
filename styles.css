@@ -49,7 +49,7 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  transform: translate(-50%, -50%) translateY(-30px); /* Смещаем вверх */
+  transform: translate(-50%, -50%)  scale(0.9) translateY(-40px); /* Смещаем вверх */
   z-index: -1;
 }
 
