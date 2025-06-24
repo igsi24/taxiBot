@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Taxi-Bot — сервис для вызова такси с помощью ИИ.">
-  <title>Taxi-Bot</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taxi-Bot — сервис для вызова такси с помощью ИИ. Быстро, удобно, инновационно.">
+    <title>Taxi-Bot</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Видео для ПК -->
-  <video class="fullscreen-video desktop-video" autoplay muted playsinline>
-    <source src="Plane.mp4" type="video/mp4" />
-  </video>
+    <!-- Видео для ПК (1920x1080) -->
+    <video class="fullscreen-video desktop-video" autoplay muted playsinline>
+      <source src="Plane.mp4" type="video/mp4">
+    </video>
 
-  <!-- Видео для мобильных -->
-  <video class="fullscreen-video mobile-video" autoplay muted playsinline>
-    <source src="Planemobile.mp4" type="video/mp4" />
-  </video>
+    <!-- Видео для мобильных (1080x1920) -->
+    <video class="fullscreen-video mobile-video" autoplay muted playsinline>
+      <source src="Planemobile.mp4" type="video/mp4">
+    </video>
 
-  <!-- Кнопки действий -->
-  <div class="content">
-    <button id="telegramButton" class="action-btn">Открыть Telegram</button>
-    <button id="formButton" class="action-btn">Оформить заказ без Telegram</button>
-  </div>
+    <!-- Telegram-кнопка -->
+    <a href="#" class="telegram-logo" id="telegramButton"></a>
 
-  <!-- Форма -->
-  <div id="orderForm" class="form-container" style="display:none;">
-    <form action="https://example.com/api/order" method="POST">
-      <input type="text" name="name" placeholder="Ваше имя" required />
-      <input type="tel" name="phone" placeholder="Телефон (9 цифр)" required pattern="\d{9}" />
-      <input type="text" name="address" placeholder="Адрес" required />
-      <input type="datetime-local" name="datetime" required />
-      <button type="submit">Отправить заказ</button>
-    </form>
-  </div>
+    <!-- Скрипт для открытия Telegram-приложения -->
+    <script>
+      document.getElementById("telegramButton").addEventListener("click", function(event) {
+        event.preventDefault(); // Предотвращаем стандартный переход
 
-  <script>
-    // Открытие Telegram
-    document.getElementById("telegramButton").addEventListener("click", function (e) {
-      e.preventDefault();
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      if (isMobile) {
-        window.location.href = "tg://resolve?domain=AIgptstest2024_bot";
-      } else {
-        window.open("https://web.telegram.org/k/#@AIgptstest2024_bot", "_blank");
-      }
-    });
-
-    // Показ формы
-    document.getElementById("formButton").addEventListener("click", function () {
-      document.getElementById("orderForm").style.display = "block";
-    });
-  </script>
+        // Проверяем, мобильное устройство или нет
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+          // Открываем Telegram-приложение
+          window.location.href = "tg://resolve?domain=AIgptstest2024_bot";
+        } else {
+          // Открываем веб-версию Telegram
+          window.open("https://web.telegram.org/k/#@AIgptstest2024_bot", "_blank");
+        }
+      });
+    </script>
 
 </body>
 </html>
