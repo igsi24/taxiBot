@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Taxi-Bot — сервис для вызова такси с помощью ИИ. Быстро, удобно, инновационно.">
-    <title>Taxi-Bot</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Taxi-Bot — сервис для вызова такси с помощью ИИ. Быстро, удобно, инновационно." />
+  <title>Taxi-Bot</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- Видео для ПК (1920x1080) -->
-    <video class="fullscreen-video desktop-video" autoplay muted playsinline>
-      <source src="Plane.mp4" type="video/mp4">
-    </video>
+  <!-- Видео для ПК -->
+  <video class="fullscreen-video desktop-video" autoplay muted playsinline>
+    <source src="Plane.mp4" type="video/mp4" />
+  </video>
 
-    <!-- Видео для мобильных (1080x1920) -->
-    <video class="fullscreen-video mobile-video" autoplay muted playsinline>
-      <source src="Planemobile.mp4" type="video/mp4">
-    </video>
+  <!-- Видео для Мобилок -->
+  <video class="fullscreen-video mobile-video" autoplay muted playsinline>
+    <source src="Planemobile.mp4" type="video/mp4" />
+  </video>
 
-    <!-- Telegram-кнопка -->
-    <a href="#" class="telegram-logo" id="telegramButton"></a>
+  <!-- Кнопки -->
+  <div class="button-container">
+    <button id="openTelegramBot">Открыть Telegram Бота</button>
+    <button id="openWebForm">Заполнить форму</button>
+  </div>
 
-    <!-- Скрипт для открытия Telegram-приложения -->
-    <script>
-      document.getElementById("telegramButton").addEventListener("click", function(event) {
-        event.preventDefault(); // Предотвращаем стандартный переход
+  <!-- Модальная форма -->
+  <div class="modal" id="webFormModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="orderForm">
+        <h2>Заказ такси</h2>
+        <input type="text" name="name" placeholder="Имя" required />
+        <input type="tel" name="phone" placeholder="Телефон" required />
+        <input type="text" name="city" placeholder="Город" required />
+        <input type="text" name="address" placeholder="Адрес" required />
+        <input type="datetime-local" name="date" required />
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
 
-        // Проверяем, мобильное устройство или нет
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        
-        if (isMobile) {
-          // Открываем Telegram-приложение
-          window.location.href = "tg://resolve?domain=AIgptstest2024_bot";
-        } else {
-          // Открываем веб-версию Telegram
-          window.open("https://web.telegram.org/k/#@AIgptstest2024_bot", "_blank");
-        }
-      });
-    </script>
+  <!-- Скрипт -->
+  <script>
+    // Telegram-бот
+    document.getElementById("openTelegramBot").addEventListener("click", function () {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = "tg://resolve?domain=AIgptstest2024_bot";
+      } else {
+        window.open("https://web.telegram.org/k/#@AIgptstest2024_bot", "_blank");
+      }
+    });
+
+    // Работа модального окна
+    const modal = document.getElementById("webFormModal");
+    document.getElementById("openWebForm").onclick = () => (modal.style.display = "flex");
+    document.querySelector(".close").onclick = () => (modal.style.display = "none");
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+
+    // Обработка формы
+    document.getElementById("orderForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const payload = {};
+      formData.forEach((value, key) => (payload[key] = value));
+
+      try {
+        const res = await fetch("https://YOUR_DOMAIN_OR_IP/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await res.text();
+        alert(result || "Заявка отправлена!");
+        modal.style.display = "none";
+      } catch (err) {
+        alert("Ошибка отправки. Попробуйте позже.");
+      }
+    });
+  </script>
 
 </body>
 </html>
