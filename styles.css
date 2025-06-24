@@ -6,180 +6,127 @@
 }
 
 body {
-  background-color: #000000; /* Чёрный фон */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100vh; /* Высота на весь экран */
+  background-color: #000000;
+  height: 100vh;
   overflow: hidden;
   position: relative;
+  font-family: Arial, sans-serif;
 }
 
-/* Контейнер текста */
-.content {
-  position: absolute;
-  top: 60%; /* Опускаем текст ниже */
+/* Видеофоны */
+.fullscreen-video {
+  position: fixed;
+  top: 50%;
   left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 2;
+  z-index: -1;
 }
 
-/* Белый текст с серой обводкой */
-.hero-title, .hero-subtitle {
-  font-size: 1rem;
-  color: white;
-  -webkit-text-stroke: 2px gray;
-  text-transform: uppercase;
-  font-weight: bold;
+/* Видео по умолчанию: десктоп */
+.desktop-video {
+  display: block;
 }
 
-/* Основные стили */
-.hero-title {
-  font-size: 4rem;
-}
-
-/* Скрываем видео по умолчанию */
-.desktop-video,
 .mobile-video {
   display: none;
 }
 
-/* Десктоп — показываем desktop-video */
-@media (min-width: 769px) {
-  .desktop-video {
-    display: block;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    transform: translate(-50%, -50%) scale(0.9) translateY(-40px);
-    z-index: -1;
-  }
-}
-
-/* Мобильные — показываем mobile-video */
 @media (max-width: 768px) {
+  .desktop-video {
+    display: none;
+  }
   .mobile-video {
     display: block;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    transform: translate(-50%, -50%) scale(0.9);
-    z-index: -1;
-  }
 }
 
-
-
-
-/* Контейнер для iframe (по умолчанию скрыт) */
-.telegram-iframe-container {
-  display: none; /* Скрыто, пока не нажмут на кнопку */
-  position: fixed;
-  top: 50%;
+/* Кнопки */
+.button-container {
+  position: absolute;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40vw; /* Увеличили размер */
-  height: 40vh;
-  background: rgba(0, 0, 0, 0.8); /* Затемнённый фон */
-  border-radius: 10px;
-  z-index: 1000;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.button-container button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.button-container button:hover {
+  background: #0d6efd;
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
   justify-content: center;
   align-items: center;
 }
 
-/* Сам iframe (увеличен) */
-.telegram-iframe-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Телеграм-кнопка (по умолчанию скрыта, увеличена, смещена) */
-.telegram-logo {
-  position: absolute;
-  top: calc(100% - 390px); /* Подняли вверх на 30px */
-  left: calc(50% - 170px); /* Сдвинули влево на 30px */
-  width: 300px; /* Увеличена в 3 раза */
-  height: 300px;
-  background: url('image2.png') no-repeat center;
-  background-size: contain;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  opacity: 0; /* Полностью невидима */
-}
-
-/* ПК-версия (оставляем невидимой) */
-@media (min-width: 769px) {
-  .telegram-logo {
-    opacity: 0; /* Остаётся невидимой */
-  }
-}
-
-/* Мобильная версия (оставляем невидимой) */
-@media (max-width: 768px) {
-  .telegram-logo {
-    opacity: 0; /* Остаётся невидимой */
-  }
-}
-
-
-/* Эффект увеличения при наведении */
-.telegram-logo:hover {
-  transform: scale(1.2);
-}
-/* Кнопки действий */
-.action-btn {
-  background-color: #00aaff;
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  margin: 10px;
-  font-size: 1.2rem;
+.modal-content {
+  background: white;
+  padding: 30px;
   border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.action-btn:hover {
-  background-color: #0088cc;
-}
-
-/* Контейнер формы */
-.form-container {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0,0,0,0.85);
-  padding: 20px;
-  border-radius: 12px;
-  z-index: 1000;
-  width: 300px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
   text-align: center;
 }
 
-.form-container form input,
-.form-container form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
+.modal-content h2 {
+  margin-bottom: 20px;
 }
 
-.form-container form button {
-  background-color: #00cc88;
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button[type="submit"] {
+  background: #28a745;
   color: white;
-  font-weight: bold;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  width: 100%;
+}
+
+.modal-content button[type="submit"]:hover {
+  background: #218838;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
 }
